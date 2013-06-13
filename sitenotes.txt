@@ -1,0 +1,13 @@
+Restaurant website:
+Name,
+Menu,
+images,
+hours,
+location,
+phone number,
+about
+
+fonts:
+Josefin Slab
+League Gothic
+Fjord

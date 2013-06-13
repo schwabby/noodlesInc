@@ -1,0 +1,285 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* --
+Noodles Inc Draft 2 Stylesheet
+Author: Matt Schwabenbauer (@schwabby)
+Copyright 2013 Matt Schwabenbauer
+--
+
+Table of contents
+1 - Structural tags
+2 - Reset
+3 - Global Styles
+4 - Section specific styles
+-----------------------------------------------------------------*/
+
+
+/* 1 - Structural tags
+So the HTML5 structural tags work in older browsers------------- */
+
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+
+/*
+End structural tags--------------------------------------------- */
+
+
+/* 2 - CSS Reset
+---------------------- html5doctor.com/html-5-reset-stylesheet/ */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,time,mark,audio,video { margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; } 
+body { line-height:1; }
+ol,ul { list-style:none; }
+blockquote,q { quotes:none; }
+blockquote:before,blockquote:after,q:before,q:after { content:'';content:none; }
+ins { text-decoration:none; }
+del { text-decoration:line-through; }
+table { border-collapse:collapse;border-spacing:0; }
+
+a:-webkit-any-link {
+text-decoration: none !important;
+cursor: auto;
+}
+
+img {
+	max-width: 100%;
+}
+
+/*
+End Reset ------------------------------------------------------ */
+
+
+/* 3 - Global styles
+----------------------------------------------------------------*/
+
+#page {
+	margin: 0 auto;
+	width: 100%;
+    zoom: 1;
+}
+
+body {
+	font: normal 100% "Josefin Slab", Calibri, sans-serif;
+		text-decoration: none !important;
+		text-align: center;
+		background: url(../images/bg.png);
+}
+
+img {
+	max-width: 100%;
+}
+
+
+/*
+End Global Styles ----------------------------------------------*/
+
+
+/* 4 - Section specific styles
+----------------------------------------------------------------*/
+
+
+/* Begin styles for header
+----------------------------------------------------------------*/
+.header {
+	margin-bottom:0;
+	padding-bottom: 2em;
+}
+
+.left {
+	width: 50%;
+	float: left;
+	overflow: hidden;
+	margin-bottom: 0;
+	padding-bottom: 2em;
+}
+
+.right {
+	margin-right: 10%;
+	width: 20%;
+	float: right;
+	overflow: hidden;
+}
+
+/* Begin Styles for nav bar
+---------------------------------------------*/
+
+.navbar {
+	line-height: 1;
+	clear: both;
+	background: #ec10a1;
+	margin-bottom: 2em;
+}
+
+.nav {
+		list-style-type:none;
+	font-size: 3em;
+}
+
+.nav li{
+	background: black;
+	color: white;
+	list-style-type:none;
+	margin-top:0;
+	text-align: center;
+	display: inline;
+}
+
+#nav-menu { padding-left: 5%;
+	-moz-border-radius: 5px 0px 0px 5px; 
+	-o-border-radius: 5px 0px 0px 5px; 
+	-webkit-border-radius: 5px 0px 0px 5px; 
+	border-radius: 5px 0px 0px 5px; }
+
+#nav-about {padding-right: 5%;
+-moz-border-radius: 0px 5px 5px 0px; 
+	-o-border-radius: 0px 5px 5px 0px; 
+	-webkit-border-radius: 0px 5px 5px 0px; 
+	border-radius: 0px 5px 5px 0px }
+
+#nav-divider {margin-bottom: -5%;
+-moz-border-radius: 0px;
+	-o-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px; }
+	
+
+.nav #nav-menu a:visited {
+	color: white;
+	text-decoration: none !important;
+}
+
+.nav #nav-menu a {
+	color: white;
+	text-decoration: none !important;
+}
+
+.nav #nav-menu a:hover {
+	color: #ec10a1;
+background: url(../images/bg.png);
+}
+
+.nav #nav-about a:visited {
+	color: white;
+	text-decoration: none !important;
+}
+
+.nav #nav-about a {
+	color: white;
+	text-decoration: none !important;
+}
+
+.nav #nav-about a:hover {
+	color: #ec10a1;
+background: url(../images/bg.png);
+}
+
+.nav #nav-divider a:visited {
+	color: white;
+	text-decoration: none !important;
+}
+
+.nav #nav-divider a {
+	color: white;
+	text-decoration: none !important;
+}
+
+.nav #nav-divider a:hover {
+	cursor:default;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Begin styles for main section
+---------------------------------------------*/
+.main {
+	margin: 0 auto;
+	border: 1px solid black;
+}
+
+.slide1 { width: 80%; }
+
+.slide2 {width: 80%;}
+
+slide3 {width: 80%;}
+
+/* Begin styles for footer
+------------------------------------------*/
+.footer {
+	position:absolute;
+	height:auto;
+	width: 100%;
+	margin-top: -30px;
+	padding-top: 0;
+	background: black;
+	color: white;
+	padding-bottom: 1em;
+	padding-top: .5em;
+}
+
+.footerhead {
+	border-top: 10px solid #ec10a1;
+	border-bottom: 10px solid #ec10a1;
+	background: black;
+	font-size: 4em;
+	margin-bottom: .3em;
+	margin-top: .3em;
+	color: #ec10a1;
+	font-weight: bold;
+	margin-left: 18%;
+	margin-right: 18%;
+}
+
+.footer1 {
+	background: black;
+	float: left;
+	width: 20%;
+	padding-left: 15%;
+
+}
+
+.footer1 h1 {
+	font-size: 2em;
+}
+
+.footer1 p {
+	font-size: 1em;
+}
+
+.footer2 {
+	background: black;
+	float: left;
+	width: 20%;
+	padding-left: 5%;
+		border-right: 1px solid white;
+		border-left: 1px solid white;
+		padding-right: 5%;
+}
+
+.footer2 h1 {
+	font-size: 2em;
+}
+
+.footer2 p {
+	font-size: 1em;
+}
+
+.footer3 {
+	background: black;
+	float: left;
+	width: 20%;
+}
+
+.footer3 h1 {
+	font-size: 2em;
+}
+
+.footer3 p {
+	font-size: 1em;
+}
+
+/*
+End section specific styles ------------------------------------*/
