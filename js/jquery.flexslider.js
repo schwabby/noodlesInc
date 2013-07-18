@@ -7,6 +7,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
  * Contributing author: Tyler Smith (@mbmufffin)
+ * Contributing author: Matt Schwabenbauer (@schwabby)
  */
 
 ;(function ($) {
