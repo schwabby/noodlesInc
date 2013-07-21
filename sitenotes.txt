@@ -1,3 +1,13 @@
+7/21 notes:
+alignment issue with navigation:
+When you make the 1200px media query, just make everthing fixed.
+target the alignment for ios resolutions: 320, 480, 768, 1024, fuck the other devices :(
+remove the cherry blossom and green banner between 500-700.
+to the right of the facebook feed put "since 2013"
+
+
+
+Undated notes:
 Restaurant website:
 Name,
 Menu,
