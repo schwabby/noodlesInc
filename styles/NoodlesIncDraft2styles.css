@@ -67,7 +67,6 @@ body {
 		font: normal 100% "Josefin Slab", Calibri, sans-serif;
 		text-decoration: none !important;
 		text-align: center;
-		background: url(../images/bg.png);
 }
 
 /*
@@ -85,7 +84,26 @@ End Global Styles ----------------------------------------------*/
 	padding-bottom: 2em;
 }
 
+/* fade in animation by Alex Gurevich http://graphicfusiondesign.com/blog/design/creating-fancy-css3-fade-in-animations-on-page-load/ */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
 .left {
+	opacity:0;  
+    -webkit-animation:fadeIn ease-in 1;  
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards; 
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+	-webkit-animation-delay: 0.7s;
+	-moz-animation-delay: 0.7s;
+	animation-delay: 0.7s;
+
 	width: 50%;
 	float: left;
 	overflow: hidden;
@@ -97,6 +115,20 @@ End Global Styles ----------------------------------------------*/
 		max-width: 100%;}
 
 .right {
+	opacity:0;
+    -webkit-animation:fadeIn ease-in 1;  
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+	-webkit-animation-delay: 1.3s;
+	-moz-animation-delay: 1.3s;
+	animation-delay: 1.3s;
+	
 	padding-top: 8%;
 	padding-right: 7%;
 	width: 37%;
@@ -111,6 +143,24 @@ End Global Styles ----------------------------------------------*/
 ---------------------------------------------*/
 
 .navbar {
+	
+		opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+ 
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+	
+	-webkit-animation-delay: 3s;
+-moz-animation-delay: 3s;
+animation-delay: 3s;
+
 	clear: both;
 	background: #07b974;
 	margin-bottom: 2em;
@@ -122,15 +172,21 @@ End Global Styles ----------------------------------------------*/
 }
 
 .nav li{
+	padding-top: 1%;
+	padding-bottom: 1%;
 	font-size: 4em;
 	background: black;
 	color: white;
 	display: inline;
 }
+.nav li:hover{
+	background: black url(../../../NoodlesInc/chopstickbg.png) no-repeat;
+	background-position:center; 
+		font-color: #ec10a1 !important;
+		color: #ec10a1 !important;
+}
 
 #nav-menu {
-	padding-top: 1%;
-	padding-bottom: 1%;
 	-moz-border-radius: 5px 0px 0px 5px; 
 	-o-border-radius: 5px 0px 0px 5px; 
 	-webkit-border-radius: 5px 0px 0px 5px; 
@@ -138,8 +194,6 @@ End Global Styles ----------------------------------------------*/
 }
 
 #nav-about {
-	padding-top: 1%;
-	padding-bottom: 1%;
 	-moz-border-radius: 0px 5px 5px 0px; 
 	-o-border-radius: 0px 5px 5px 0px; 
 	-webkit-border-radius: 0px 5px 5px 0px; 
@@ -161,7 +215,7 @@ End Global Styles ----------------------------------------------*/
 }
 
 .nav #nav-menu a:hover {
-	color: #ec10a1;
+	color: #ec10a1 !important;
 }
 
 .nav #nav-about a:visited {
@@ -170,6 +224,7 @@ End Global Styles ----------------------------------------------*/
 }
 
 .nav #nav-about a {
+
 	padding-left: 5%;
 	padding-right: 5%;
 	color: white;
@@ -177,7 +232,8 @@ End Global Styles ----------------------------------------------*/
 }
 
 .nav #nav-about a:hover {
-	color: #ec10a1;
+	color: #ec10a1 !important;
+
 }
 
 .nav #nav-divider a:visited {
@@ -189,15 +245,28 @@ a {
     text-decoration: none;
 }
 
-
 /* Begin styles for main section
 ---------------------------------------------*/
 
 .main {
 	margin: 0 auto;
-}
+	}
 
 .facebook {
+	opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	animation-delay: 3s;
+	
 	width: 63%;
 	height: 70px;
 	background: #ec10a1;
@@ -240,7 +309,7 @@ a {
 	padding-left: 1%;
 	position: relative;
 	margin-right: 10%;
-	width: 200%;
+	width: 110%;
 	bottom: 70px;
 	z-index: 0;
 }
@@ -252,6 +321,20 @@ a {
 ------------------------------------------*/
 
 .footerhead {
+	opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	animation-delay: 3s;
+	
 	background: #ec10a1;
 	margin-bottom: .8em;
 	margin-top: -2em;
@@ -261,18 +344,32 @@ a {
 
 .footerhead h1 {
 	font: normal 100% "Josefin Slab", Calibri, sans-serif;
-	font-size: 2.5em;
+	font-size: 2em;
 		line-height: -5;
 }
 
 .footerhead p {
 	font: normal 100% Kalinga, Calibri, sans-serif;
-	font-size: 1.4em;
+	font-size: 1em;
 		line-height: -5;
 }
 	
 
 .footer {
+	opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	animation-delay: 3s;
+	
 	border-top: 2px solid white;
 	position:absolute;
 	height:auto;
@@ -286,44 +383,45 @@ a {
 	background: black;
 	float: left;
 	width: 20%;
-	padding-left: 15%;
-
+	padding-left: 6.66666666667%;
+	padding-right: 6.66666666667%;
 }
 
 .footer1 h1 {
 	font: normal 100% Kalinga, Calibri, sans-serif;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: normal;
 }
 
 .footer1 p {
 	font: normal 100% "Josefin Slab", Calibri, sans-serif;
-	font-size: 1em;
+	font-size: .8em;
 }
 
 .footer2 {
 	background: black;
 	float: left;
 	width: 20%;
-	padding-left: 5%;
+	padding-left: 6.66666666667%;
 		border-right: 2px solid white;
 		border-left: 2px solid white;
-		padding-right: 5%;
+		padding-right: 6.66666666667%;
 	height: 128px;
 }
 
 .footer2 h1 {
 	font: normal 100% Kalinga, Calibri, sans-serif;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: normal;
 }
 
 .footer2 p {
 	font: normal 100% "Josefin Slab", Calibri, sans-serif;
-	font-size: 1em;
+	font-size: .8em;
 }
 
 .footer3 {
+	padding-left: 6.66666666667%;
 	font-size: .9em;
 	font: normal 100% Kalinga, Calibri, sans-serif;
 	background: black;
@@ -333,17 +431,17 @@ a {
 
 .footer3 h1 {
 	font: normal 100% Kalinga, Calibri, sans-serif;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: normal;;
 }
 
 .footer3 p {
 	font: normal 100% "Josefin Slab", Calibri, sans-serif;
-	font-size: 1em;
+	font-size: .8em;
 }
 
 .footer4 {
-		background: #07b974;
+		background: #black;
 		border-top: 2px solid white;
 	clear: both;
 }
