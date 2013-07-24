@@ -12,6 +12,8 @@ Table of contents
 2 - Reset
 3 - Global Styles
 4 - Section specific styles
+5 - Media Queries
+6 - Fonts
 -----------------------------------------------------------------*/
 
 
@@ -69,6 +71,25 @@ body {
 		text-align: center;
 }
 
+li {
+		transition: background 0.3s ease-in;
+}
+
+a {
+	-moz-transition: color 0.3s linear;
+	-o-transition: color 0.3s linear;
+	-webkit-transition: color 0.3s linear;
+	transition: color 0.3s linear;
+}
+
+a:hover {
+	color: #ec10a1 !important;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
 /*
 End Global Styles ----------------------------------------------*/
 
@@ -82,37 +103,48 @@ End Global Styles ----------------------------------------------*/
 .header {
 	margin-bottom:0;
 	padding-bottom: 2em;
+	width: 100%;
 }
 
 /* fade in animation by Alex Gurevich http://graphicfusiondesign.com/blog/design/creating-fancy-css3-fade-in-animations-on-page-load/ */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-opr-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
 .left {
 	opacity:0;  
+	-opr-animation:fadeIn ease-in 1;
     -webkit-animation:fadeIn ease-in 1;  
     -moz-animation:fadeIn ease-in 1;
     animation:fadeIn ease-in 1;
+	-opr-animation-fill-mode:forwards;
     -webkit-animation-fill-mode:forwards; 
     -moz-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
+	-opr-animation-duration:1s;
     -webkit-animation-duration:1s;
     -moz-animation-duration:1s;
     animation-duration:1s;
+	-opr-animation-delay: 0.7s;
 	-webkit-animation-delay: 0.7s;
 	-moz-animation-delay: 0.7s;
 	animation-delay: 0.7s;
 
 	width: 50%;
-	float: left;
+	float: left !important;
+	padding-left: 0;
 	overflow: hidden;
 	margin-bottom: 0;
 	margin-left: 0;
 }
 
 .left img {
-		max-width: 100%;}
+	float: left !important;
+	padding-left: 0;
+	margin-left: 0;
+	max-width: 100%;
+	}
 
 .right {
 	opacity:0;
@@ -144,7 +176,7 @@ End Global Styles ----------------------------------------------*/
 
 .navbar {
 	
-		opacity:0;  /* make things invisible upon start */
+	opacity:0;  /* make things invisible upon start */
     -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
     -moz-animation:fadeIn ease-in 1;
     animation:fadeIn ease-in 1;
@@ -158,8 +190,8 @@ End Global Styles ----------------------------------------------*/
     animation-duration:1s;
 	
 	-webkit-animation-delay: 3s;
--moz-animation-delay: 3s;
-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	animation-delay: 3s;
 
 	clear: both;
 	background: #07b974;
@@ -180,7 +212,7 @@ animation-delay: 3s;
 	display: inline;
 }
 .nav li:hover{
-	background: black url(../../../NoodlesInc/chopstickbg.png) no-repeat;
+	background: black url(../images/chopstickbg.png) no-repeat;
 	background-position:center; 
 		font-color: #ec10a1 !important;
 		color: #ec10a1 !important;
@@ -267,15 +299,15 @@ a {
 	-moz-animation-delay: 3s;
 	animation-delay: 3s;
 	
+	float: left;
 	width: 63%;
-	height: 70px;
+	height: 95px;
 	background: #ec10a1;
 	color: white;
 	margin-bottom: 2%;
-	padding-top: 1%;
-	padding-bottom: 1.5%;
-	padding-left: 2.5%;
-	margin-left: 1%;
+	padding-top: 10px;
+	padding-left: 20px;
+	margin-left: 20px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-o-border-radius: 5px;
@@ -290,7 +322,7 @@ a {
 
 .fbtext {
 	position: absolute;
-	height: 80px;
+	height: 80px !important;
 	overflow: hidden;
 	width: 50%;
 	margin-left: 8%;
@@ -312,6 +344,18 @@ a {
 	width: 110%;
 	bottom: 70px;
 	z-index: 0;
+}
+
+.date {
+	float: left;
+	margin-left: 1%;
+	max-width: 100%;
+		width: 25%;
+}
+
+.date img {
+	max-width: 100%;
+
 }
 
 
@@ -336,7 +380,6 @@ a {
 	animation-delay: 3s;
 	
 	background: #ec10a1;
-	margin-bottom: .8em;
 	margin-top: -2em;
 	color: white;
 	line-height: -5;
@@ -345,13 +388,14 @@ a {
 .footerhead h1 {
 	font: normal 100% "Josefin Slab", Calibri, sans-serif;
 	font-size: 2em;
-		line-height: -5;
+	line-height: -5;
 }
 
 .footerhead p {
-	font: normal 100% Kalinga, Calibri, sans-serif;
+	font: normal 100% "Lato", Calibri, sans-serif;
 	font-size: 1em;
-		line-height: -5;
+	line-height: -5;
+	font-weight: 300;
 }
 	
 
@@ -374,9 +418,7 @@ a {
 	position:absolute;
 	height:auto;
 	width: 100%;
-	margin-top: -1%;
 	background: black;
-	color: white;
 }
 
 .footer1 {
@@ -388,14 +430,31 @@ a {
 }
 
 .footer1 h1 {
-	font: normal 100% Kalinga, Calibri, sans-serif;
+	font-family: "Lato", Calibri, sans-serif;
 	font-size: 1.5em;
-	font-weight: normal;
+	font-weight: 300;
+	color: #cdcdcd;
+	white-space: nowrap;
 }
 
 .footer1 p {
 	font: normal 100% "Josefin Slab", Calibri, sans-serif;
 	font-size: .8em;
+	color:  #07b974;
+	text-align: left;
+}
+
+.footer1 a {
+	font-family: "Lato", Calibri, sans-serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #ec10a1;
+}
+
+
+
+.footer1 a:hover {
+	color: #07b974 !important;
 }
 
 .footer2 {
@@ -403,55 +462,349 @@ a {
 	float: left;
 	width: 20%;
 	padding-left: 6.66666666667%;
-		border-right: 2px solid white;
-		border-left: 2px solid white;
-		padding-right: 6.66666666667%;
-	height: 128px;
+	border-right: 2px solid white;
+	border-left: 2px solid white;
+	padding-right: 6.66666666667%;
+	height: 108px;
+	line-height: 1.5;
 }
 
 .footer2 h1 {
-	font: normal 100% Kalinga, Calibri, sans-serif;
+	font-family: "Lato", Calibri, sans-serif;
 	font-size: 1.5em;
-	font-weight: normal;
+	font-weight: 300;
+	color: #cdcdcd;
 }
 
 .footer2 p {
 	font: normal 100% "Josefin Slab", Calibri, sans-serif;
-	font-size: .8em;
+	font-size: 1.3em;
+	color: #07b974;
+	white-space: nowrap;
 }
 
+.footer2 a {
+	color:  #ec10a1;
+	font-size: 1.5em;
+	white-space: nowrap;
+}
+
+.footer2 a:hover {
+	color: #07b974 !important;
+}	
+
 .footer3 {
-	padding-left: 6.66666666667%;
+	text-align: left;
 	font-size: .9em;
-	font: normal 100% Kalinga, Calibri, sans-serif;
 	background: black;
 	float: left;
 	width: 20%;
+	display: inline;
+	white-space:nowrap;
 }
 
 .footer3 h1 {
-	font: normal 100% Kalinga, Calibri, sans-serif;
+	text-align: center;
+	padding-left: 50%;
+	font-family: "Lato", Calibri, sans-serif;
 	font-size: 1.5em;
-	font-weight: normal;;
+	font-weight: 300;
+	color: #cdcdcd;
 }
 
 .footer3 p {
+	padding-left: 5%;
+	text-align: left;
+	font: normal 100% "Lato", Calibri, sans-serif;
+	font-size: 1.3em;
+	color: #07b974;
+	display: inline !important;
+	font-weight: 300;
+}
+
+.footer3 a {
+	text-align: left;
+	font: normal 100% "Josefin Slab", Calibri, sans-serif;
+	text-decoration: none !important;
+	color:  #ec10a1;
+	font-size: 1em;
+	display: inline !important;
+}
+
+.footer3 a:hover {
+	color: #07b974 !important;
+}
+
+.footer3 a:visited {
 	font: normal 100% "Josefin Slab", Calibri, sans-serif;
 	font-size: .8em;
+	color: white;
+	text-decoration: none !important;
+}
+
+.footer3 li {
+	display: block;
 }
 
 .footer4 {
-		background: #black;
-		border-top: 2px solid white;
+	font: normal 100% "Lato", Calibri, sans-serif;
+	font-size: .8em;
+	background: #black;
+	border-top: 2px solid white;
 	clear: both;
+	color:  #cdcdcd;
+	font-weight: 300;
+	padding-top: 1%;
+	padding-bottom: 1%;
 }
 
 /*
 End section specific styles ------------------------------------*/
 
-/*
-FONTS ----------------------------------------------------------*/
+/* 5 - Media Queries
+----------------------------------------------------------------*/
+
+@media screen and (min-width: 1430px)
+{
+	.right {
+		padding-top: 4%;
+	}
+}
+
+@media screen and (max-width: 1200px)
+{
+	.facebook{
+	width: 64%
+	}
+}
+
+
+@media screen and (max-width: 1085px)
+{
+	.footer3 p {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 1062px)
+{
+	.footer2 {
+		height: 120px;
+	}
+	
+
+}
+
+@media screen and (max-width: 1024px) {
+	.right {
+		padding-right: 5%;
+	}
+	
+	.facebook{
+		width: 65%;
+	}
+	
+	.fbtext{
+		margin-left: 10%;
+	}
+	
+} /*-- End 1024px media query */
+
+@media screen and (max-width: 992px)
+{
+	
+
+	.footer1 p{
+		font-size: 1em;
+	}
+	
+	.footer2 {
+		height: 162px;
+		line-height: 2;
+	}	
+	
+	.footer3 {
+		display: block !important;
+		white-space:normal;
+	}
+	
+	.footer3 p {
+		font-size: 1.3em;
+		display: block !important;
+	}
+	
+	.footer3 a {
+		display: block !important;
+		padding-left: 5%;
+	}
+}
+
+@media screen and (max-width: 865px)
+{
+		.fbtext{
+		margin-left: 13%;
+	}
+}
+
+@media screen and (max-width: 851px)
+{
+	.footer2 {
+		height: 175px;
+	}
+}
+
+@media screen and (max-width: 836px)
+{
+
+}
+
+@media screen and (max-width: 800px)
+{
+		.right {
+			padding-top: 6%;
+		padding-right: 3%;
+		width: 40%;
+	}
+	
+	.facebook{
+		width: 66%;
+	}
+	
+}
+
+@media screen and (max-width: 768px)
+{
+	
+}
+
+@media screen and (max-width: 758px)
+{
+	.footer1 p {
+		font-size: .8em;
+	}
+	
+	.footer2 {
+		height: 155px;
+	}
+	
+	.footer3 a{
+		font-size: .8em;
+	}
+}
+
+@media screen and (max-width: 620px)
+{
+	.left,	.date {
+		display: none;
+	}
+	
+	.right {
+		float: left;
+		width: 95%;
+		padding-left: 3%;
+		padding-right: 0;
+		padding-top: 1%;
+		padding-bottom: 3%;
+	}
+	
+	.navbar {
+		margin-bottom: 1em;
+	}
+	
+	.facebook {
+		width: 90%;
+		padding-left: 0;
+	}
+	
+	.fbtext {
+		margin-left: 19%;
+		width: 70%;
+	}
+	
+	.footer1 {
+		float: left;
+		border-bottom: .1em dotted white;
+		display: inline !important;
+		overflow: hidden;
+		width: 90%;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 5%;
+		text-align: left;
+		padding-top: 2%;
+		padding-bottom: 2%;
+	}
+	
+	.footer1 h1, .footer1 p, .footer1 a {
+		display: inline !important;
+	}
+	
+	.footer1 p {
+		text-align: left;
+	}
+	
+	.footer2 {
+		float: left;
+		width: 90%;
+		border-left: hidden;
+		border-right: hidden;
+		border-bottom: .1em dotted white;
+		height: auto;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 5%;
+		text-align: left;
+	}
+	
+		.footer2 h1, .footer2 p, .footer2 a {
+		display: inline !important;
+	}
+	
+	.footer3 {
+		float: left;
+		width: 90%;
+		padding-left: 5%;
+		padding-right: 0;
+		text-align: left;
+		padding-top: 2%;
+		padding-bottom: 2%;
+	}
+	
+		.footer3 h1, .footer3 p, .footer3 a {
+		padding-left: 0;
+		display: inline !important;
+	}
+	
+	.footer3 a {
+		font-size: 1em;
+	}
+
+		
+	
+}
+
+@media screen and (max-width: 483px)
+{
+	.facebook img {
+		display: none;
+}
+
+	.fbtext {
+		margin-left: 1%;
+		width: 87%;
+	}
+
+}
+
+@media screen and (max-width: 320px)
+
+{
+}
+
+/* 6 - FONTS ----------------------------------------------------------*/
 @font-face{
   font-family: Kalinga;
   src:url(../fonts/kalinga.ttf);
 }
+
+
