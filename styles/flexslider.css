@@ -61,9 +61,9 @@ html[xmlns] .slides {display: block;}
     -webkit-animation-duration:1s;
     -moz-animation-duration:1s;
     animation-duration:1s;
-	-webkit-animation-delay: 3s;
-	-moz-animation-delay: 3s;
-	animation-delay: 3s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
 	
 	
 margin: 0 0 60px; position: relative; -webkit-border-radius: 5px; -moz-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; zoom: 1; margin-left: 1%; margin-right: 1%;
@@ -108,4 +108,24 @@ border-image:url(../images/slideshowbg.png) 25 repeat;
 @media screen and (max-width: 860px) {
   .flex-direction-nav .flex-prev {opacity: 1; left: 0;}
   .flex-direction-nav .flex-next {opacity: 1; right: 0;}
+}
+
+@media screen and (max-width: 550px)
+{
+	.flexslider {
+	-moz-border-radius: 0px 0px 0px 0px; 
+	-o-border-radius: 0px 0px 0px 0px; 
+	-webkit-border-radius: 0px 0px 0px 0px; 
+	border-radius: 0px 0px 0px 0px;
+	 zoom: 1;
+	 margin-left: 0;
+	 margin-right: 0;
+	 margin-bottom: 0;
+	 padding-bottom: 0;
+	border: none;
+	}
+	
+	.flexslider .slides img {
+		-webkit-border-radius: 0px; -moz-border-radius: 0px; -o-border-radius: 0px; border-radius: 0px;
+		}
 }

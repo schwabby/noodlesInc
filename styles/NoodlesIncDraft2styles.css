@@ -8,7 +8,7 @@ Copyright 2013 Matt Schwabenbauer
 --
 
 Table of contents
-1 - Structural tags
+1 - Structural tagsho
 2 - Reset
 3 - Global Styles
 4 - Section specific styles
@@ -60,6 +60,7 @@ FONTS ----------------------------------------------------------*/
 ----------------------------------------------------------------*/
 
 #page {
+	background:url(../images/bg.png) repeat;
 	margin: 0 auto;
 	width: 100%;
     zoom: 1;
@@ -72,6 +73,9 @@ body {
 }
 
 li {
+		-moz-transition: background 0.3s ease-in;
+		-o-transition: background 0.3s ease-in;
+		-webkit-transition: background 0.3s ease-in;
 		transition: background 0.3s ease-in;
 }
 
@@ -82,12 +86,12 @@ a {
 	transition: color 0.3s linear;
 }
 
-a:hover {
+a:hover, a:focus {
 	color: #ec10a1 !important;
 }
 
 a:visited {
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
 /*
@@ -134,9 +138,6 @@ End Global Styles ----------------------------------------------*/
 	width: 50%;
 	float: left !important;
 	padding-left: 0;
-	overflow: hidden;
-	margin-bottom: 0;
-	margin-left: 0;
 }
 
 .left img {
@@ -189,9 +190,9 @@ End Global Styles ----------------------------------------------*/
     -moz-animation-duration:1s;
     animation-duration:1s;
 	
-	-webkit-animation-delay: 3s;
-	-moz-animation-delay: 3s;
-	animation-delay: 3s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
 
 	clear: both;
 	background: #07b974;
@@ -199,40 +200,53 @@ End Global Styles ----------------------------------------------*/
 }
 
 .nav {
-
 	font-size: .5em;
 }
 
 .nav li{
-	padding-top: 1%;
-	padding-bottom: 1%;
+	display: inline;
+}
+
+.nav li a {
+	padding-top: 15px;
+	padding-bottom: 15px;
 	font-size: 4em;
 	background: black;
 	color: white;
-	display: inline;
-}
-.nav li:hover{
-	background: black url(../images/chopstickbg.png) no-repeat;
-	background-position:center; 
-		font-color: #ec10a1 !important;
-		color: #ec10a1 !important;
+	
 }
 
-#nav-menu {
+.nav li a:hover, .nav li a:focus {
+	background: black url(../images/chopstickbg.png) no-repeat;
+	-moz-transition: background 0.3s ease-in;
+	-o-transition: background 0.3s ease-in;
+	-webkit-transition: background 0.3s ease-in;
+	transition: background 0.3s ease-in;
+	background-position:center;
+
+}
+
+#nav-menu a {
 	-moz-border-radius: 5px 0px 0px 5px; 
 	-o-border-radius: 5px 0px 0px 5px; 
 	-webkit-border-radius: 5px 0px 0px 5px; 
 	border-radius: 5px 0px 0px 5px; 
 }
 
-#nav-about {
+
+
+#nav-about a {
 	-moz-border-radius: 0px 5px 5px 0px; 
 	-o-border-radius: 0px 5px 5px 0px; 
 	-webkit-border-radius: 0px 5px 5px 0px; 
 	border-radius: 0px 5px 5px 0px;
 	border-left: 2px solid white;
+	margin-left: -2px;
 }
-	
+
+#nav-about a:target {
+   background: yellow !important;
+}
 
 .nav #nav-menu a:visited {
 	color: white;
@@ -246,7 +260,7 @@ End Global Styles ----------------------------------------------*/
 	text-decoration: none !important;
 }
 
-.nav #nav-menu a:hover {
+.nav #nav-menu a:hover, .nav #nav-menu a:focus {
 	color: #ec10a1 !important;
 }
 
@@ -256,14 +270,13 @@ End Global Styles ----------------------------------------------*/
 }
 
 .nav #nav-about a {
-
 	padding-left: 5%;
 	padding-right: 5%;
 	color: white;
 	text-decoration: none !important;
 }
 
-.nav #nav-about a:hover {
+.nav #nav-about a:hover, .nav #nav-about a:focus {
 	color: #ec10a1 !important;
 
 }
@@ -295,9 +308,9 @@ a {
     -webkit-animation-duration:1s;
     -moz-animation-duration:1s;
     animation-duration:1s;
-	-webkit-animation-delay: 3s;
-	-moz-animation-delay: 3s;
-	animation-delay: 3s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
 	
 	float: left;
 	width: 63%;
@@ -305,8 +318,8 @@ a {
 	background: #ec10a1;
 	color: white;
 	margin-bottom: 2%;
-	padding-top: 10px;
-	padding-left: 20px;
+	padding-top: 15px;
+	padding-left: 18px;
 	margin-left: 20px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -325,7 +338,7 @@ a {
 	height: 80px !important;
 	overflow: hidden;
 	width: 50%;
-	margin-left: 8%;
+	margin-left: 100px;
 	font: normal 100% Kalinga, Calibri, sans-serif;
 	text-align: center;
 	background: white !important;
@@ -354,17 +367,6 @@ a {
 }
 
 .date img {
-	max-width: 100%;
-
-}
-
-
-
-
-/* Begin styles for footer
-------------------------------------------*/
-
-.footerhead {
 	opacity:0;  /* make things invisible upon start */
     -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
     -moz-animation:fadeIn ease-in 1;
@@ -375,9 +377,110 @@ a {
     -webkit-animation-duration:1s;
     -moz-animation-duration:1s;
     animation-duration:1s;
-	-webkit-animation-delay: 3s;
-	-moz-animation-delay: 3s;
-	animation-delay: 3s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
+	
+	max-width: 100%;
+
+}
+
+
+/* Begin styles for the menu
+------------------------------------------*/
+
+.menu {
+		margin-bottom: 4em;
+}
+
+.leftbranch {
+	float: left;
+	margin-left: 5%;
+	width:30%;
+}
+
+.menutitle {
+	float: left;
+	width:30%;
+	font-family: "Lato", calibri, sans-serif;
+	font-size: 10em;
+	font-weight: 100;
+}
+
+.rightbranch {
+	float:left;
+	width: 30%;
+}
+
+.menu h1 {
+	font-size: 2em;
+}
+
+.menu h2 {
+	font-size: 1.5em;
+}
+
+.menu h3 {
+	font-size: 1em;
+}
+
+.menu p {
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+.leftmenu {
+	float: left;
+	width: 42.5%;
+	margin-left: 5%;
+	margin-right: 2.5%;
+	
+}
+.rightmenu {
+	float: left;
+	width: 42.5%;
+	margin-right: 5%;
+	margin-left: 2.5%;
+}
+
+.menudivider {
+	clear: both;
+}
+
+.leftmenu2 {
+	float: left;
+	width: 42.5%;
+	margin-left: 5%;
+	margin-right: 2.5%;
+	
+}
+.rightmenu2 {
+	float: left;
+	width: 42.5%;
+	margin-right: 5%;
+	margin-left: 2.5%;
+}
+
+
+
+/* Begin styles for footer
+------------------------------------------*/
+
+.footerhead {
+	clear:both;
+	opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
 	
 	background: #ec10a1;
 	margin-top: -2em;
@@ -410,9 +513,9 @@ a {
     -webkit-animation-duration:1s;
     -moz-animation-duration:1s;
     animation-duration:1s;
-	-webkit-animation-delay: 3s;
-	-moz-animation-delay: 3s;
-	animation-delay: 3s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
 	
 	border-top: 2px solid white;
 	position:absolute;
@@ -453,7 +556,7 @@ a {
 
 
 
-.footer1 a:hover {
+.footer1 a:hover, .footer1 a:focus {
 	color: #07b974 !important;
 }
 
@@ -489,7 +592,7 @@ a {
 	white-space: nowrap;
 }
 
-.footer2 a:hover {
+.footer2 a:hover, .footer2 a:focus {
 	color: #07b974 !important;
 }	
 
@@ -531,7 +634,12 @@ a {
 	display: inline !important;
 }
 
-.footer3 a:hover {
+.footer3 a:visited {
+	color: #ec10a1 !important;
+	text-decoration: none !important;
+}
+
+.footer3 a:hover, .footer3 a:focus {
 	color: #07b974 !important;
 }
 
@@ -547,6 +655,7 @@ a {
 }
 
 .footer4 {
+	clear: both;
 	font: normal 100% "Lato", Calibri, sans-serif;
 	font-size: .8em;
 	background: #black;
@@ -556,6 +665,43 @@ a {
 	font-weight: 300;
 	padding-top: 1%;
 	padding-bottom: 1%;
+}
+
+.footer4 p {
+	display: inline;
+}
+
+.footer4 a {
+	font: normal 100% "Lato", Calibri, sans-serif;
+	text-decoration: none !important;
+	color:  #07b974;
+	font-size: 1em;
+	display: inline !important;
+}
+
+.footer4:hover {
+		-moz-transition: color 0.3s linear;
+	-o-transition: color 0.3s linear;
+	-webkit-transition: color 0.3s linear;
+	transition: color 0.3s linear;
+}
+
+.footer4 a:visited {
+	color: #ec10a1;
+	text-decoration: none !important;
+}d
+
+.footer4 a:hover, .footer4 a:focus {
+	color:  #ec10a1 !important;
+	-moz-transition: color 0.3s linear;
+	-o-transition: color 0.3s linear;
+	-webkit-transition: color 0.3s linear;
+	transition: color 0.3s linear;
+}
+
+.footer4 a:visited {
+	color: #ec10a1;
+	text-decoration: none !important;
 }
 
 /*
@@ -573,9 +719,21 @@ End section specific styles ------------------------------------*/
 
 @media screen and (max-width: 1200px)
 {
-	.facebook{
-	width: 64%
+	.date {
+		padding-top: 1%;
 	}
+	
+	.facebook{
+	width: 64%;
+	}
+	
+	.fbtext {
+		width: 54%;
+}
+
+.right {
+	margin-left: 1%;
+}
 }
 
 
@@ -584,13 +742,17 @@ End section specific styles ------------------------------------*/
 	.footer3 p {
 		font-size: 1em;
 	}
-}
+}}
 
 @media screen and (max-width: 1062px)
 {
 	.footer2 {
 		height: 120px;
 	}
+	
+	.fbtext {
+	width: 52%;
+}
 	
 
 }
@@ -601,11 +763,15 @@ End section specific styles ------------------------------------*/
 	}
 	
 	.facebook{
-		width: 65%;
+		width: 64.5%;
 	}
 	
-	.fbtext{
-		margin-left: 10%;
+	.fbtext {
+		width: 53%;
+	}
+	
+	.date {
+		padding-top: 2%;
 	}
 	
 } /*-- End 1024px media query */
@@ -639,10 +805,10 @@ End section specific styles ------------------------------------*/
 	}
 }
 
-@media screen and (max-width: 865px)
+@media screen and (max-width: 950px)
 {
-		.fbtext{
-		margin-left: 13%;
+	.fbtext {
+		width: 50%;
 	}
 }
 
@@ -653,11 +819,6 @@ End section specific styles ------------------------------------*/
 	}
 }
 
-@media screen and (max-width: 836px)
-{
-
-}
-
 @media screen and (max-width: 800px)
 {
 		.right {
@@ -666,19 +827,26 @@ End section specific styles ------------------------------------*/
 		width: 40%;
 	}
 	
-	.facebook{
+	.facebook {
 		width: 66%;
 	}
 	
-}
-
-@media screen and (max-width: 768px)
-{
+	.fbtext {
+		width: 50%;
+	}
+	
+	.date {
+		padding-top: 3.5%;
+	}
 	
 }
 
 @media screen and (max-width: 758px)
 {
+.fbtext {
+	width: 48%;
+}
+	
 	.footer1 p {
 		font-size: .8em;
 	}
@@ -701,24 +869,93 @@ End section specific styles ------------------------------------*/
 	.right {
 		float: left;
 		width: 95%;
-		padding-left: 3%;
+		padding-left: 5px;
 		padding-right: 0;
-		padding-top: 1%;
-		padding-bottom: 3%;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 	
 	.navbar {
-		margin-bottom: 1em;
+		margin-bottom: 0;
 	}
 	
+	.nav li{
+	display: block;
+}
+
+.nav li a {
+	display: block;
+	margin: 0 0 0 0;
+	border-left: none;
+}
+
+.nav li a:hover, .nav li a:focus {
+	background: #07b974;
+	color: white;
+	-moz-transition: color 0.3s linear;
+	-o-transition: color 0.3s linear;
+	-webkit-transition: color 0.3s linear;
+	transition: color 0.3s linear;
+		color: white !important;
+}
+
+#nav-menu a {
+	display: block;
+	border-left: none;
+	-moz-border-radius: 0px 0px 0px 0px; 
+	-o-border-radius: 0px 0px 0px 0px; 
+	-webkit-border-radius: 0px 0px 0px 0px; 
+	border-radius: 0px 0px 0px 0px;
+	margin: 0 0 0 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+#nav-about a {
+	display: block;
+	border-left: none;
+	-moz-border-radius: 0px 0px 0px 0px; 
+	-o-border-radius: 0px 0px 0px 0px; 
+	-webkit-border-radius: 0px 0px 0px 0px; 
+	border-radius: 0px 0px 0px 0px;
+	margin: 0 0 0 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+	
 	.facebook {
-		width: 90%;
+		-moz-border-radius: 0px 0px 0px 0px; 
+		-o-border-radius: 0px 0px 0px 0px; 
+		-webkit-border-radius: 0px 0px 0px 0px; 
+		border-radius: 0px 0px 0px 0px;
+		
+		width: 100%;
 		padding-left: 0;
+		margin-left: 0;
+		padding-right: 0;
+		margin-right: 0;
+		margin-bottom: 35px;
+	}
+	
+	.facebook img {
+		display: none;
 	}
 	
 	.fbtext {
-		margin-left: 19%;
-		width: 70%;
+		width: 95%;
+		margin-left: 10px;
+				-moz-border-radius: 0px 0px 0px 0px; 
+		-o-border-radius: 0px 0px 0px 0px; 
+		-webkit-border-radius: 0px 0px 0px 0px; 
+		border-radius: 0px 0px 0px 0px;
+	}
+	
+	.footer {
+		border-top: 0;
 	}
 	
 	.footer1 {
@@ -741,6 +978,7 @@ End section specific styles ------------------------------------*/
 	
 	.footer1 p {
 		text-align: left;
+		font-size: 1em;
 	}
 	
 	.footer2 {
@@ -776,29 +1014,109 @@ End section specific styles ------------------------------------*/
 	}
 	
 	.footer3 a {
-		font-size: 1em;
-	}
-
-		
-	
+		font-size: 1.3em;
+	}		
 }
 
-@media screen and (max-width: 483px)
+@media screen and (max-width: 550px)
 {
+	.facebook {
+		margin-bottom: 0 !important;
+	}
+	
+	.footerhead {
+	margin-top: 0;
+}
+
+@media screen and (max-width: 485px)
+{
+	.facebook {
+		margin-bottom: 0 !important;
+	}
+	
+			.footer2 {
+		line-height: 1.5;
+	}
+}
+
+@media screen and (max-width: 450px)
+{
+		.facebook img {
+		display: none;
+	}
+	
+		
+	.fbtext {
+		-moz-border-radius: 0px 0px 0px 0px; 
+		-o-border-radius: 0px 0px 0px 0px; 
+		-webkit-border-radius: 0px 0px 0px 0px; 
+		border-radius: 0px 0px 0px 0px;
+		
+		margin-left: 15px;
+		width: 92%;
+	}
+	
+			.footer2 {
+		line-height: 1.5;
+	}	
+}
+
+@media screen and (max-width: 400px)
+{	
 	.facebook img {
 		display: none;
 }
 
 	.fbtext {
-		margin-left: 1%;
-		width: 87%;
+		margin-left: 15px;
+		width: 88%;
 	}
-
+	
+	.footerhead {
+		border-bottom: none;
+	}
+	
+	.footerhead h1 {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	font-size: 1.5em;
 }
 
-@media screen and (max-width: 320px)
+.footer {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
 
+.footerhead p {
+	display: none;
+}
+
+	.footer {
+		border-top: none;
+		border-bottom: 1px solid white;
+	}
+	
+		.footer2 {
+		line-height: 1.5;
+	}
+	
+	.footer3 a {
+		font-size: 1.1em;
+	}
+}
+
+
+@media screen and (max-width: 305px)
 {
+	
+	.footer3 {
+				white-space:normal;
+	}
+	
+	.footer3 a {
+		font-size: .8em;
+		white-space:normal;
+	}
 }
 
 /* 6 - FONTS ----------------------------------------------------------*/
