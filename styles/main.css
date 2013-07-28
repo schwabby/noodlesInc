@@ -13,7 +13,6 @@ Table of contents
 3 - Global Styles
 4 - Section specific styles
 5 - Media Queries
-6 - Fonts
 -----------------------------------------------------------------*/
 
 
@@ -88,10 +87,6 @@ a {
 
 a {
 	color: white;
-}
-
-a:hover, a:focus {
-	color: #ec10a1 !important;
 }
 
 a:visited {
@@ -248,10 +243,6 @@ End Global Styles ----------------------------------------------*/
 	margin-left: -2px;
 }
 
-#nav-about a:target {
-   background: yellow !important;
-}
-
 .nav #nav-menu a:visited {
 	color: white;
 	text-decoration: none !important;
@@ -265,7 +256,7 @@ End Global Styles ----------------------------------------------*/
 }
 
 .nav #nav-menu a:hover, .nav #nav-menu a:focus {
-	color: #ec10a1 !important;
+	color: #ec10a1;
 }
 
 .nav #nav-about a:visited {
@@ -281,7 +272,7 @@ End Global Styles ----------------------------------------------*/
 }
 
 .nav #nav-about a:hover, .nav #nav-about a:focus {
-	color: #ec10a1 !important;
+	color: #ec10a1;
 
 }
 
@@ -321,7 +312,7 @@ a {
 	height: 93px;
 	background: #ec10a1;
 	color: white !important;
-	margin-bottom: 2%;
+	margin-bottom: 0;
 	padding-top: 15px;
 	padding-left: 18px;
 	margin-left: 20px;
@@ -386,7 +377,7 @@ a {
 	float: left;
 	margin-left: 1%;
 	max-width: 100%;
-		width: 25%;
+	width: 25%;
 }
 
 .date img {
@@ -403,11 +394,34 @@ a {
 	-webkit-animation-delay: 2s;
 	-moz-animation-delay: 2s;
 	animation-delay: 2s;
-	
 	max-width: 100%;
-
 }
 
+.sliderborder {
+		opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
+	
+	clear: both;
+	display: block;
+	width: 100%;
+	font: normal 100% "Josefin Slab", Calibri, sans-serif;
+	color: #ec10a1;
+	font-size: .5em;
+	font-weight: 100;
+	background: url(../images/polka-bg.png) repeat-x 50%;
+ line-height: 10;
+}
 
 /* Begin styles for the menu
 ------------------------------------------*/
@@ -440,6 +454,7 @@ a {
 */
 
 
+
 .menutitle {
 		opacity:0;  /* make things invisible upon start */
     -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
@@ -455,6 +470,7 @@ a {
 	-moz-animation-delay: 2s;
 	animation-delay: 2s;
 	
+	padding: 0 0 0 0;
 	display: block;
 	margin: 0 auto;
 	width: 100%;
@@ -466,9 +482,8 @@ a {
 }
 
 .menutitle img {
-	background: url(../images/bg.png) repeat;
+	background: white;
 	width: 360px;
-	margin: 0 auto;
 }
 
 /*
@@ -482,20 +497,25 @@ a {
 
 
 .menu h1 {
-	font-size: 2em;
+	font-size: 2.2em;
+	color: #ec10a1;
 }
 
 .menu h2 {
-	font-size: 1.5em;
+	font-size: 1.8em;
+	color: #07b974; 
 }
 
 .menu h3 {
-	font-size: 1em;
+	font-size: 1.5em;
+	color: #ec10a1;
 }
 
 .menu p {
 	text-align: left;
-	margin-bottom: 1em;
+	margin-bottom: 1.3em;
+	font-size: 1.3em;
+	color: white;
 }
 
 .leftmenu {
@@ -551,7 +571,10 @@ a {
 	width: 42.5%;
 	margin-left: 5%;
 	margin-right: 2.5%;
-	
+}
+
+.leftmenu2 p {
+	color: white;
 }
 .rightmenu2 {
 	float: left;
@@ -561,10 +584,173 @@ a {
 	margin-bottom: 20px;
 }
 
+.rightmenu2 p {
+	text-align: center;
+}
+
+.menuchunk {
+	background: black;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 0 8px 6px -6px black; -webkit-box-shadow: 0 8px 6px -6px black; -moz-box-shadow: 0 8px 6px -6px black; 									    -o-box-shadow: 0 8px 6px -6px black;
+	
+	padding: 10px 10px 10px 10px;
+	
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+
+/* Begin styles for about
+------------------------------------------*/
+
+.pandivider {
+		opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
+	
+	clear: both;
+	display: block;
+	width: 100%;
+	font: normal 100% "Josefin Slab", Calibri, sans-serif;
+	color: #ec10a1;
+	font-size: .5em;
+	font-weight: 100;
+	background: url(../images/polkapink-bg.png) repeat-x 50%;
+ 	line-height: 5;
+}
+
+.panorama {
+	opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
+	
+		-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+
+	
+	width: auto;
+	overflow: hidden;
+	margin-bottom: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.panorama img {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 0 8px 6px -6px black; -webkit-box-shadow: 0 8px 6px -6px black; -moz-box-shadow: 0 8px 6px -6px black; 									    -o-box-shadow: 0 8px 6px -6px black;
+}
+
+.about {
+	opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 0 8px 6px -6px black; -webkit-box-shadow: 0 8px 6px -6px black; -moz-box-shadow: 0 8px 6px -6px black; 									    -o-box-shadow: 0 8px 6px -6px black;
+	
+	background: #07b974;
+	color: white; 
+	margin: 0 auto;
+	width: 920px;
+	font-size: 2em;
+	margin-bottom: -1em;
+	padding: 20px 20px 20px 20px;
+}
+	
+
 
 
 /* Begin styles for footer
 ------------------------------------------*/
+
+.backtotop {
+		opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
+		
+	background: #ec10a1;;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	
+	clear:both;
+	width: 170px;
+	margin: 0 auto;
+	font-size: 1.3em;
+	margin-bottom: 40px;
+			color: white !important;
+}
+
+.backtotop a {
+		padding-left: 20px;
+		padding-right: 20px;
+		line-height: 2.5;
+				color: white !important;
+}
+
+.backtotop:hover, .backtotop:focus {
+		background: #07b974 !important; 
+		color: white !important;
+				-moz-transition: background 0.3s ease-in;
+		-o-transition: background 0.3s ease-in;
+		-webkit-transition: background 0.3s ease-in;
+		transition: background 0.3s ease-in;
+}
+	
 
 .footerhead {
 	clear:both;
@@ -583,8 +769,8 @@ a {
 	animation-delay: 2s;
 	
 /*	background: url(../images/polka-bg.png) repeat-x 50% #ec10a1; */
-	background: #ec10a1;
-	margin-top: -2em;
+	background: #07b974; 
+
 	color: white;
 	line-height: -5;
 	padding-top: 15px;
@@ -592,7 +778,6 @@ a {
 }
 
 .footerhead h1 {
-	background: #ec10a1;
 	font: normal 100% "Josefin Slab", Calibri, sans-serif;
 	font-size: 2em;
 	line-height: -5;
@@ -605,7 +790,6 @@ a {
 	font-size: 1em;
 	line-height: -5;
 	font-weight: 300;
-		background: #ec10a1;
 	/*	width: 30%; */
 		margin: 0 auto;
 }
@@ -882,7 +1066,11 @@ End section specific styles ------------------------------------*/
 
 @media screen and (max-width: 992px)
 {
-	
+	.about {
+		width: auto;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
 
 	.footer1 p{
 		font-size: 1em;
@@ -914,6 +1102,8 @@ End section specific styles ------------------------------------*/
 	.fbtext {
 		width: 50%;
 	}
+	
+
 }
 
 @media screen and (max-width: 851px)
@@ -921,6 +1111,8 @@ End section specific styles ------------------------------------*/
 	.footer2 {
 		height: 175px;
 	}
+	
+
 }
 
 @media screen and (max-width: 800px)
@@ -942,6 +1134,8 @@ End section specific styles ------------------------------------*/
 	.date {
 		padding-top: 3.5%;
 	}
+	
+
 	/*
 	.footerhead h1, .footerhead p {
 		width: 60%;
@@ -955,13 +1149,18 @@ End section specific styles ------------------------------------*/
 .fbtext {
 	width: 48%;
 }
-	
-	.footer1 p {
-		font-size: .8em;
-	}
+
+.about {
+	font-size: 1.5em;
+	width: auto%;
+}
+
+.footer1 p {
+	font-size: .9em;
+}
 	
 	.footer2 {
-		height: 155px;
+		height: 178px;
 	}
 	
 	.footer3 a{
@@ -978,8 +1177,35 @@ End section specific styles ------------------------------------*/
 
 @media screen and (max-width: 620px)
 {
-	.left,	.date {
+	.left {
 		display: none;
+	}
+	
+	.date {
+		margin: 0 auto;
+		padding: 0 0 0 0;
+		clear: both;
+		width: 100%;
+		background: url(../images/polkapink-bg.png) repeat-x 50%;
+		
+			opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
+	}
+	
+	.date img {
+		background: white;
+		width: 170px;
 	}
 	
 	.right {
@@ -987,8 +1213,8 @@ End section specific styles ------------------------------------*/
 		width: 95%;
 		padding-left: 5px;
 		padding-right: 0;
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 50px;
+		padding-bottom: 60px;
 	}
 	
 	.navbar {
@@ -996,22 +1222,33 @@ End section specific styles ------------------------------------*/
 	}
 	
 	.nav li{
+				color: white !important;
 	display: block;
 }
 
 .nav li a {
+			color: white !important;
 	display: block;
 	margin: 0 0 0 0;
 	border-left: none;
 }
 
+.nav li:hover, .nav li:focus {
+	background: #07b974;
+		-moz-transition: background 0.3s ease-in;
+		-o-transition: background 0.3s ease-in;
+		-webkit-transition: background 0.3s ease-in;
+		transition: background 0.3s ease-in;
+		color: white !important;
+}
+
+
 .nav li a:hover, .nav li a:focus {
 	background: #07b974;
-	color: white;
-	-moz-transition: color 0.3s linear;
-	-o-transition: color 0.3s linear;
-	-webkit-transition: color 0.3s linear;
-	transition: color 0.3s linear;
+		-moz-transition: background 0.3s ease-in;
+		-o-transition: background 0.3s ease-in;
+		-webkit-transition: background 0.3s ease-in;
+		transition: background 0.3s ease-in;
 		color: white !important;
 }
 
@@ -1027,6 +1264,7 @@ End section specific styles ------------------------------------*/
 	padding-right: 0;
 	padding-top: 20px;
 	padding-bottom: 10px;
+			color: white !important;
 }
 
 #nav-about a {
@@ -1041,6 +1279,7 @@ End section specific styles ------------------------------------*/
 	padding-right: 0;
 	padding-top: 10px;
 	padding-bottom: 20px;
+			color: white !important;
 }
 	
 	.facebook {
@@ -1054,7 +1293,7 @@ End section specific styles ------------------------------------*/
 		margin-left: 0;
 		padding-right: 0;
 		margin-right: 0;
-		margin-bottom: 35px;
+		margin-bottom: 40px;
 		height: 130px;
 	}
 	
@@ -1072,15 +1311,34 @@ End section specific styles ------------------------------------*/
 		border-radius: 0px 0px 0px 0px;
 		  position: relative;
 	}
-	
-.menutitle h4 {
-	font-size: .5em;
-	width: 40%;
-}
 
 .menu {
 	margin-left: 5px;
 	margin-right: 5px;
+}
+
+.menutitle {
+	background: white !important;
+}
+
+.menu h1 {
+	font-size: 2em;
+}
+
+.menu h2 {
+	font-size: 1.5em;
+}
+
+.menu h3 {
+	font-size: 1.3em;
+}
+
+.menu p {
+	font-size: 1em;
+}
+
+.icon {
+	width: 60px;
 }
 
 	
@@ -1177,22 +1435,21 @@ End section specific styles ------------------------------------*/
 
 @media screen and (max-width: 550px)
 {
-	.facebook {
-		margin-bottom: 0 !important;
-	}
-	
-		.menutitle {
-				height: 115px;
+	.menutitle {
+	height: 115px;
 	background: url(../images/polka-bg.png) repeat-x 50%;
 	margin-bottom: 0
 }
 
 .menutitle img {
 	background: url(../images/bg.png) repeat;
-	
 	width: 200px;
-	height: 34px;
-	margin: 0 auto;
+	
+	height: 36px;
+}
+
+.about {
+	font-size: 1.2em;
 }
 	
 	.footerhead {
@@ -1204,14 +1461,7 @@ End section specific styles ------------------------------------*/
 }
 
 @media screen and (max-width: 485px)
-{
-
-
-	.facebook {
-
-		margin-bottom: 0 !important;
-	}
-	
+{	
 			.footer2 {
 		line-height: 1.5;
 	}
@@ -1299,11 +1549,3 @@ End section specific styles ------------------------------------*/
 		white-space:normal;
 	}
 }
-
-/* 6 - FONTS ----------------------------------------------------------*/
-@font-face{
-  font-family: Kalinga;
-  src:url(../fonts/kalinga.ttf);
-}
-
-

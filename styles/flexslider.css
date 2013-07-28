@@ -65,16 +65,19 @@ html[xmlns] .slides {display: block;}
 	-moz-animation-delay: 2s;
 	animation-delay: 2s;
 	
+			box-shadow: 0 8px 6px -6px black;
+		-webkit-box-shadow: 0 8px 6px -6px black;
+		-moz-box-shadow: 0 8px 6px -6px black;
+		-o-box-shadow: 0 8px 6px -6px black;
 	
-margin: 0 0 60px; position: relative; -webkit-border-radius: 5px; -moz-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; zoom: 1; margin-left: 1%; margin-right: 1%;
-
-border-style: solid;
-border-width: 20px 20px 20px 20px;
--moz-border-image: url(../images/slideshowbg.png) 25 repeat;
--webkit-border-image: url(../images/slideshowbg.png) 25 repeat;
--o-border-image: url(../images/slideshowbg.png) 25 repeat;
-border-image:url(../images/slideshowbg.png) 25 repeat;
+	
+margin: 0 0 0; position: relative; -webkit-border-radius: 5px; -moz-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; zoom: 1; margin-left: 20px; margin-right: 20px;
 }
+
+.flexslider img {
+
+}
+
 .flex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease; }
 .loading .flex-viewport {max-height: 300px;}
 .flexslider .slides {zoom: 1; }
